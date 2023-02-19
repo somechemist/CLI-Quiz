@@ -1,3 +1,5 @@
+from os import system
+from time import sleep
 class QuizLogic:
 
     def __init__(self, question_bank):
@@ -18,6 +20,8 @@ class QuizLogic:
             self.score += 1
         else:
             print("Incorrect")
+        sleep(2)
+        system('clear')
 
     def check_answer(self, u_answer, c_answer):
         return u_answer == c_answer

@@ -1,6 +1,7 @@
 import html
 import json
 from urllib.request import urlopen
+from os import system
 
 class MakeQuestionBank:
     def __init__(self):
@@ -15,7 +16,7 @@ class MakeQuestionBank:
         question_difficulty = input("Select the difficulty (easy/medium/hard).\n")
         if question_difficulty != "easy" or question_difficulty != "medium" or question_difficulty != "hard":
             question_difficulty = "medium"
-        question_topic = input("Select the topic (computers/sports/history/GENERAL)")
+        question_topic = input("Select the topic (computers/sports/history/GENERAL)\n")
         if question_topic == "sports":
             topic = 21
         elif question_topic == "computers":
@@ -26,6 +27,7 @@ class MakeQuestionBank:
             topic = 9
         url = f'https://opentdb.com/api.php?amount={num_of_questions}&category={topic}' \
               f'&difficulty={question_difficulty}&type=boolean'
+        system('clear')
         return url
 
     def create_question_bank(self):
