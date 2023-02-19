@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# ------------------------------------------------------------- #
+#                       Justin Powell                           #
+#                        02-19-2023                             #
+#              Based on 100-day challenge quiz                  #
+#   Questions are all from https://opentdb.com/api_config.php   #
+# ------------------------------------------------------------- #
+
 from Classes.QuestionGenerator import MakeQuestionBank
 from Classes.QuizLogic import QuizLogic
 
