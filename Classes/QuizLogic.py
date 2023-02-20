@@ -24,4 +24,4 @@ class QuizLogic:
         system('clear')
 
     def check_answer(self, u_answer, c_answer):
-        return u_answer == c_answer
+        return u_answer.lower()[0] == c_answer.lower()[0]
